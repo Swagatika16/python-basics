@@ -2,7 +2,7 @@ import math
 # String data type 
  
  # literal assignment 
-first ="Harry"
+first ="Dave"
 last ="Gray"
  
 # print(type(first))
