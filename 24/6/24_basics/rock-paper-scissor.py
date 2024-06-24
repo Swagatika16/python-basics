@@ -1,7 +1,12 @@
 import random
+from enum import Enum 
 
-print("")
-playerchoice = input("Enter...\n1 for Rock ,\n2 for paper, \n3 for scissor-")
+class RPS(Enum):
+    ROCK = 1
+    PAPER = 2
+    SCISSOR = 3
+    
+playerchoice = input("\nEnter...\n1 for Rock ,\n2 for paper, \n3 for scissor-")
 player = int (playerchoice)
 if player< 1 |   player > 3:
     print(playerchoice+"invalid choice")  
@@ -10,8 +15,8 @@ computerchoice = random.choice("123")
 computer = int(computerchoice)
  
 print("")  
-print("Your choice" + playerchoice)  
-print("Computer choice" + computerchoice)
+print("Your choice-"  +str(RPS(player)).replace('RPS.',''))  
+print("Computer choice-"  +str(RPS( computer)).replace('RPS.',''))
 print("")
 
 if player ==1 and  computer == 3 :
